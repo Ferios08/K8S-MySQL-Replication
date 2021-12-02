@@ -11,11 +11,11 @@ spec:
   template:
     metadata:
       labels:
-        name: mysql-master
+        name: mysql-slave
     spec:
       containers:
         - name: master
-          image: mysql-master
+          image: firasdotcom/mysql-master
           ports:
             - containerPort: 3306
           env:

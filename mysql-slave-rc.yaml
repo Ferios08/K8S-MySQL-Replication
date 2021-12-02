@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: slave
-          image: mysql-worker
+          image: firasdotcom/mysql-worker
           ports:
             - containerPort: 3306
           env:
