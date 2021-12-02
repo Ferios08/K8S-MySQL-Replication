@@ -1,20 +1,20 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: mysql-slave
+  name: mysql-worker
   labels:
-    name: mysql-slave
+    name: mysql-worker
 spec:
   replicas: 1
   selector:
-    name: mysql-slave
+    name: mysql-worker
   template:
     metadata:
       labels:
-        name: mysql-slave
+        name: mysql-worker
     spec:
       containers:
-        - name: slave
+        - name: worker
           image: firasdotcom/mysql-worker
           ports:
             - containerPort: 3306
